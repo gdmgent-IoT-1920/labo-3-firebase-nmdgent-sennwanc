@@ -1,0 +1,53 @@
+/*text*/
+.label{
+	font-size: 16pt;
+	color: white;
+
+}
+h2{
+	font-size: 20pt;
+	color: black;
+}
+#humidity, #temperature{
+	font-size: 20pt;
+	margin-bottom: 10px;
+}
+.fas{
+	font-size: 20pt;
+	margin-bottom: 10px;
+}
+/*buttons*/
+.btn{
+	height: 30px;
+	background-color: cadetblue;
+	color: white;
+	font-size: 12pt;
+	border-radius: 20px;
+	border: none;
+}
+
+/*dividers*/
+.form-group, .form-check, .sensors, .container, form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+form, .sensors{
+	background-color: rgb(122, 230, 216);
+	width: 100%;
+	padding: 20px;
+}
+.sensors{
+	background-color: rgb(90, 164, 224);
+}
+#colorPicker{
+	height: 100px;
+	width: 200px;
+	border: none;
+	text-align: center;
+	margin: 20px 0px;
+	border: 1px solid black;
+}
+#toggleMatrix{
+	margin: 20px 0px;
+}

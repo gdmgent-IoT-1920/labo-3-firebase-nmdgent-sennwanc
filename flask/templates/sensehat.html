@@ -3,28 +3,34 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>SERVER - SENSEHAT</title>
-	<style>
-		#senseEmulator{
-			width: 300px;
-			height: 300px;
-			background-color: black;
-		}
-	</style>
+    <title>SERVER - SENSEHAT</title>
+    <script src="https://kit.fontawesome.com/c14fce81d7.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'main.css')}}">
 </head>
 <body>
+    <div class="container">
 	<form>
+        <h2>Color Picker</h2>
         <div class="form-group">
-          <label for="color">Kleur</label>
+          <label class="label" for="color">Color</label>
           <input type="text" class="form-control jscolor" id="colorPicker" value="#000">
         </div>
         <div class="form-check">
+            <label class="label" class="form-check-label" for="toggleMatrix">Matrix on/off</label>
             <input type="checkbox" class="form-check-input" id="toggleMatrix">
-            <label class="form-check-label" for="toggleMatrix">Matrix on/off</label>
         </div>
         <button type="submit" class="btn btn-primary" id="btnChange">Submit</button>
     </form>
-
+    <div class="sensors">
+        <h2>Sensors</h2>
+        <i class="fas fa-tint"></i><div id="humidity"></div>
+        <i class="fas fa-temperature-low"></i><div id="temperature"></div>
+    </div>
+    <div class="sensors">
+        
+    </div>
+</div>
+    
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.0.4/jscolor.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-firestore.js"></script>

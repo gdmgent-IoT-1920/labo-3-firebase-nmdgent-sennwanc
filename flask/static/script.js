@@ -54,11 +54,11 @@ const firebaseConfig = {
         const temperature = document.getElementById('temperature');
         const humidity = document.getElementById('humidity');
 
-        this._db.collection('raspberry_collection').doc('sensor-data')
+        this._db.collection('raspberry').doc('sensor')
         .onSnapshot((doc) => {
             console.log(doc.data());
-            temperature.innerText = `${parseFloat(doc.data().temperature).toFixed(2)}°C`;
-            humidity.innerText = `${parseFloat(doc.data().humidity).toFixed(2)}`;
+            temperature.innerText = `${parseFloat(doc.data().temperature).toFixed(2)} °C`;
+            humidity.innerText = `${parseFloat(doc.data().humidity).toFixed(2)} %`;
         })
     }
 }
